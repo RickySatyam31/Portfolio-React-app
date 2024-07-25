@@ -1,0 +1,13 @@
+img{
+    height: 10%;
+    width: 10%;
+  
+    
+    
+}
+.ImageContainer{
+    /* width: max-content; */
+    background: #000;
+    display: flex;
+
+}
