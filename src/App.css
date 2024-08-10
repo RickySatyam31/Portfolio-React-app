@@ -1,75 +1,12 @@
-/* .App {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    padding: 20px;
-  }
-  
-  .resume {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .profile-pic {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-right: 20px;
-  }
-  
-  .contact-info h1 {
-    margin: 0;
-    font-size: 24px;
-    color: #333333;
-  }
-  
-  .contact-info p {
-    margin: 5px 0;
-  }
-  
-  a {
-    color: #0073e6;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  section {
-    margin-bottom: 20px;
-  }
-  
-  h2 {
-    border-bottom: 2px solid #0073e6;
-    padding-bottom: 5px;
-    color: #333333;
-  }
-  
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  ul li {
-    background: url('https://img.icons8.com/ios-filled/16/0073e6/chevron-right.png') no-repeat left center;
-    padding-left: 20px;
-    margin-bottom: 10px;
-  }
-  
-  .job, .edu, .project {
-    margin-bottom: 10px;
-  }
-  
-  h3 {
-    margin: 0;
-    color: #555555;
-  }
-   */
+/* index.css or App.css */
+body {
+  background-color: black;
+  color: white; /* White text on black background */
+}
+
+/* Additional global styles for better readability */
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff; /* White color for headings */
+}
+
+

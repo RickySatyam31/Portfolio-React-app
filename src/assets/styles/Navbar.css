@@ -1,2 +1,14 @@
 .navBar{
+    align-content: center;
+    text-align: center;
 }
+button{
+    color: #d6d6d6cc;
+    border: none;
+    background: none;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+button:hover {
+    color: white;
+  }

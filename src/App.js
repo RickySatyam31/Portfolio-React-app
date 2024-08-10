@@ -1,28 +1,22 @@
-import React,{useState} from 'react';
-import Footer from './componets/Footer';
-import Home from './componets/Home';
-import MySkills from './componets/MySkills';
-import Navbar from './componets/Navbar';
-import MyResume from './componets/MyResume';
+import React from 'react';
+import Footer from './components/Footer';
+import Home from './components/Home';
+import Navbar from './components/Navbar';
+import MyResume from './components/MyResume';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 
 export default function App() {
-
-
   return (
-       <Router>
-      <div className="App">
-        <Navbar/>
+    <div className="App">
+      <Router>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/resume" element={<MyResume />} />
-          <Route path="/myskills" element={<MySkills />} />
-          
-
+          <Route path="/MyResume" element={<MyResume/>} />
         </Routes>
-        <Footer/>
-      </div>
-    </Router>
-  )
+        <Footer />
+      </Router>
+    </div>
+  );
 }

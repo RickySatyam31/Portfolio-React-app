@@ -1,13 +1,17 @@
-img{
-    height: 10%;
-    width: 10%;
-  
-    
-    
+img {
+    height: 20%;
+    width: 20%;
+    margin-left: auto;
+    padding-right: 10%;
 }
-.ImageContainer{
-    /* width: max-content; */
-    background: #000;
-    display: flex;
 
+.ImageContainer {
+    background: black;
+    display: flex;
+}
+
+.IntroContainer {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
 }
