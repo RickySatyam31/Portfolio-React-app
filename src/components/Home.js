@@ -5,18 +5,20 @@ import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import MySkills from './MySkills';
 import MyProjects from './MyProjects';
-import ContactMe from './ContactMe';
+import Footer from './Footer';
 
 export default function Home() {
   const Navigate = useNavigate();
+  
   return (
     <div>
       <div className='ImageContainer'>
         <motion.div
           initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 2, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           className='IntroContainer'
+          id="Home_Section"
         >
           <h1>Hi, My name is Ricky Satyam</h1>
           <h2>I am a software Developer</h2>
@@ -29,14 +31,23 @@ export default function Home() {
           transition={{ duration: 1.2 }}
         />
       </div>
+      
       <div className='buttonContainer'>
         <button>View Projects</button>
         <button onClick={() => Navigate('./MyResume')}>View Resume</button> 
-        <MySkills/>
-        <MyProjects/>
-        <ContactMe/>
-
       </div>
+      
+      <section id="MySkills_Section">
+        <MySkills />
+      </section>
+      
+      <section id="MyProjects_Section">
+        <MyProjects />
+      </section>
+      
+      <section id="ContactMe_Section">
+        <Footer />
+      </section>
     </div>
   );
 }

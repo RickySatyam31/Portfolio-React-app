@@ -1,0 +1,60 @@
+/* MyProjects.css */
+.projects-section {
+    padding: 60px 20px;
+    background-color: #121212; /* Dark background */
+    text-align: center;
+    color: #ffffff; /* White text */
+  }
+  
+  .projects-section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #ffffff; /* Keep headings white */
+  }
+  
+  .projects-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .project-card {
+    width: 300px;
+    height: 300px;
+    background-color: #1f1f1f; /* Slightly lighter dark background for cards */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Darker shadow for dark theme */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8); /* Darker shadow on hover */
+  }
+  
+  .project-card a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  .project-content {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .project-content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #ffffff; /* Keep text white */
+  }
+  
+  .project-content p {
+    color: #cccccc; /* Slightly lighter text for descriptions */
+  }
+  

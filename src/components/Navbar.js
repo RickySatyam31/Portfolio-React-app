@@ -1,19 +1,21 @@
-import React from 'react'
-import '../assets/styles/Navbar.css';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import '../assets/styles/Navbar.css';
+
 export default function Navbar() {
-  // const navigate = useNavigate();
+  const scrollToSection = (sectionId) => {
+    document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+  };
+  const navigate = useNavigate();
+
   return (
     <div>
-        <nav className='navBar'>
-            {/* <button onClick={()=>navigate('./')}>Home</button> */}
-            <button>About</button>
-            {/* <button onClick={()=>navigate('./myskills')}>Skills</button> */}
-            <button>Experience</button>
-            <button>Projects</button>
-            <button>Contact</button>
-
-        </nav>
+      <nav className='navBar'>
+        <button onClick={() => scrollToSection('Home_Section')}>Home</button>
+        <button onClick={() => scrollToSection('MySkills_Section')}>Skills</button>
+        <button onClick={() => scrollToSection('MyProjects_Section')}>Projects</button>
+        <button onClick={() => scrollToSection('ContactMe_Section')}>Footer</button>
+      </nav>
     </div>
-  )
+  );
 }
