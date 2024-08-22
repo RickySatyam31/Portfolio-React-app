@@ -1,60 +1,97 @@
 /* MyProjects.css */
+
 .projects-section {
     padding: 60px 20px;
-    background-color: #121212; /* Dark background */
+    background-color: #121212;
     text-align: center;
-    color: #ffffff; /* White text */
-  }
+    color: #ffffff;
+}
   
-  .projects-section h2 {
+.projects-section h2 {
     font-size: 36px;
     margin-bottom: 40px;
-    color: #ffffff; /* Keep headings white */
-  }
+    color: #ffffff;
+}
   
-  .projects-container {
+.projects-container {
     display: flex;
     justify-content: center;
     gap: 40px;
     flex-wrap: wrap;
-  }
+}
   
-  .project-card {
+.project-card {
     width: 300px;
-    height: 300px;
-    background-color: #1f1f1f; /* Slightly lighter dark background for cards */
+    perspective: 1000px;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Darker shadow for dark theme */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
-  }
+    margin-bottom: 20px; /* Add margin for spacing the link */
+}
   
-  .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8); /* Darker shadow on hover */
-  }
+.project-card-inner {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
   
-  .project-card a {
-    text-decoration: none;
-    color: inherit;
+.project-card:hover .project-card-inner {
+    transform: rotateY(180deg);
+}
+  
+.project-card-front, .project-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+  
+.project-card-front {
+    background-color: #1f1f1f;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
-  }
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
   
-  .project-content {
+.project-card-back {
+    background-color: #1f1f1f;
+    color: #ffffff;
+    transform: rotateY(180deg);
     padding: 20px;
-    text-align: center;
-  }
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
   
-  .project-content h3 {
-    font-size: 24px;
+.project-card-back h4 {
     margin-bottom: 10px;
-    color: #ffffff; /* Keep text white */
-  }
+}
   
-  .project-content p {
-    color: #cccccc; /* Slightly lighter text for descriptions */
-  }
+.project-card-back ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
   
+.project-card-back ul li {
+    margin-bottom: 5px;
+}
+  
+.project-link {
+    display: inline-block;
+    background-color: #ff8c00;
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+  
+.project-link:hover {
+    background-color: #e07b00;
+}
