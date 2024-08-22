@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import '../assets/styles/Navbar.css';
 
 export default function Navbar() {
   const [menuActive, setMenuActive] = useState(false);
-  const navigate = useNavigate();
 
   const scrollToSection = (sectionId) => {
     document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
