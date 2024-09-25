@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import '../assets/styles/Navbar.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function Navbar() {
   const [menuActive, setMenuActive] = useState(false);
 
+  const Navigate = useNavigate();
+
   const scrollToSection = (sectionId) => {
     document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
-    setMenuActive(false); // Close menu on click
+    setMenuActive(false); 
   };
 
   const toggleMenu = () => {
@@ -24,8 +27,8 @@ export default function Navbar() {
           <button onClick={() => scrollToSection('Home_Section')}>Home</button>
           <button onClick={() => scrollToSection('MySkills_Section')}>Skills</button>
           <button onClick={() => scrollToSection('MyProjects_Section')}>Projects</button>
-          <button onClick={() => scrollToSection('ContactMe_Section')}>Contact</button>
-        </div>
+          <button onClick={() => Navigate('./MyResume')} >View Resume</button>        
+          </div>
       </nav>
     </div>
   );

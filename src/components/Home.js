@@ -5,13 +5,18 @@ import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import MySkills from './MySkills';
 import MyProjects from './MyProjects';
-import Footer from './Footer';
+import Navbar from './Navbar';
 
 export default function Home() {
   const Navigate = useNavigate();
 
+  const scrollToSection = (sectionId) => {
+    document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className='home-container'>
+      <Navbar/>
       <div className='image-container'>
         <motion.div
           initial={{ opacity: 0, y: 100 }}
@@ -26,19 +31,17 @@ export default function Home() {
             <motion.button 
               whileHover={{ scale: 1.1 }} 
               whileTap={{ scale: 0.95 }}
-              onClick={() => Navigate('#MyProjects_Section')}
+              onClick={() => scrollToSection('MyProjects_Section')}
               className='home-button'
             >
               View Projects
             </motion.button>
-            <motion.button 
-              whileHover={{ scale: 1.1 }} 
-              whileTap={{ scale: 0.95 }}
+            <button 
               onClick={() => Navigate('./MyResume')}
               className='home-button'
             >
               View Resume
-            </motion.button>
+            </button>
           </div>
         </motion.div>
         <motion.img
@@ -57,10 +60,6 @@ export default function Home() {
 
       <section id="MyProjects_Section">
         <MyProjects />
-      </section>
-
-      <section id="ContactMe_Section">
-        <Footer />
       </section>
     </div>
   );
